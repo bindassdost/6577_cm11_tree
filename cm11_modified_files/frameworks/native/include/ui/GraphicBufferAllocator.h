@@ -31,8 +31,8 @@
 
 #include <hardware/gralloc.h>
 
-#ifdef MTK_G_MT6577
-#include <hardware/mmumapper/mmumapper.h>
+#ifdef MTK_6577
+#include "hardware/mmumapper/mmumapper.h"
 #endif
 
 namespace android {
@@ -97,9 +97,9 @@ private:
     ~GraphicBufferAllocator();
     
     alloc_device_t  *mAllocDev;
-
-#ifdef MTK_G_MT6577
- 	 mmu_mapper_device_t *mMapperDev;
+    
+#ifdef MTK_6577
+    mmu_mapper_device_t *mMapperDev;
     void initMapper();
     void uninitMapper();
 
@@ -108,6 +108,7 @@ public:
     status_t unmap(unsigned int addr, unsigned int size, unsigned int format, unsigned int mva);
     status_t query(unsigned int addr, unsigned int size, unsigned int format, unsigned int *mva);
 #endif
+
 };
 
 // ---------------------------------------------------------------------------

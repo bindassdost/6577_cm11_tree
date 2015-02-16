@@ -292,7 +292,7 @@ int __android_log_write(int prio, const char *tag, const char *msg)
     return write_to_log(log_id, vec, 3);
 }
 
-#ifdef MTK_G_MT6577
+#ifdef MTK_6577
 struct xlog_record {
         const char *tag_str;
         const char *fmt_str;

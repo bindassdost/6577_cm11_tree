@@ -115,7 +115,7 @@
 #define AID_MOT_DLNA      9011  /* DLNA native */
 #endif // MOTOROLA_UIDS
 
-#ifdef MTK_G_MT6577
+#ifdef MTK_6577
 #define AID_CCCI          9996
 #define AID_NVRAM         9997
 #endif
@@ -213,13 +213,13 @@ static const struct android_id_info android_ids[] = {
 #endif
     { "sensors",       AID_SENSORS, },
     { "misc",          AID_MISC, },
-#ifdef MTK_G_MT6577
+#ifdef MTK_6577
    { "nvram",         AID_NVRAM,},
 #endif
     { "nobody",        AID_NOBODY, },
     { "theme_man", AID_THEMEMAN },
     { "audit",      AID_AUDIT, },
-#ifdef MTK_G_MT6577
+#ifdef MTK_6577
     { "ccci",      AID_CCCI, },
 #endif
 };
